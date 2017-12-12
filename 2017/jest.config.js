@@ -1,7 +1,5 @@
 module.exports = {
-    rootDir: '..',
-    roots: [
-      '<rootDir>/2017'
-    ],
-    testEnvironment: 'node'
-  };
+  rootDir: "..",
+  roots: ["<rootDir>/2017"],
+  testEnvironment: "node"
+};
