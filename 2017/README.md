@@ -16,6 +16,7 @@
 - [Hex Ed](./11-hex-ed/index.js) | [Day 11](https://adventofcode.com/2017/day/11)
 - [Digital Plumber](./12-digital-plumber/index.js) | [Day 12](https://adventofcode.com/2017/day/12)
 <!-- AUTO-GENERATED-CONTENT:START (SOLUTIONS:path=2017) -->
+<!-- AUTO-GENERATED-CONTENT:START (SOLUTIONS:path=2017) -->
 <!-- AUTO-GENERATED-CONTENT:END (SOLUTIONS) -->
 
 [advent-of-code]: http://adventofcode.com/2017
