@@ -18,7 +18,7 @@ describe("Day 2", () => {
   describe("Problem 2", () => {
     const inputs = [
       ["sample input", `5 9 2 8\n9 4 7 3\n3 8 6 5`, 9],
-      ["puzzle input", data, 53460]
+      ["puzzle input", data, 282]
     ];
 
     inputs.forEach(([name, input, output]) => {
