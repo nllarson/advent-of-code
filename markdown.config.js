@@ -18,7 +18,7 @@ module.exports = {
 
       return folders
         .map(folder => {
-          const [, day, name] = folder.match(/(\d+-?)(.*)/).map(part => {
+          const [year, day, name] = folder.match(/(\d+-?)(.*)/).map(part => {
             if (/\d+/.test(part)) {
               return parseFloat(part);
             }
@@ -28,7 +28,7 @@ module.exports = {
             `- [${name}](./${root !== dir ? dir + "/" : ""}${folder}/index.${
               lang
             })`,
-            `[Day ${day}](https://adventofcode.com/2017/day/${day})`
+            `[Day ${day}](https://adventofcode.com/${year}/day/${day})`
           ].join(" | ");
         })
         .join("\n");

@@ -4,16 +4,16 @@ const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
 
-const getUrl = (day, year = 2017) =>
+const getUrl = (day, year = 2019) =>
   `http://adventofcode.com/${year}/day/${day}/input`;
 
 const isFolder = (...joined) => fs.statSync(path.join(...joined)).isDirectory();
 
 const folders = fs
-  .readdirSync(__dirname)
+  .readdirSync("./")
   .filter(fileOrFolder => isFolder(fileOrFolder) && parseFloat(fileOrFolder))
   .reduce((all, folder) => {
-    const base = path.join(__dirname, folder);
+    const base = path.join("./", folder);
     return all.concat(
       fs.readdirSync(base).reduce((allNested, nested) => {
         const folderPath = path.join(base, nested);
@@ -43,7 +43,7 @@ const writeFile = (...args) => {
     folders.map(async ([year, folder]) => {
       const day = parseFloat(folder.split("/").pop());
       const input = await axios
-        .get(getUrl(day), {
+        .get(getUrl(day, year), {
           headers: {
             ContentType: "text/plain",
             Cookie: `session=${process.env.SESSION_COOKIE};`

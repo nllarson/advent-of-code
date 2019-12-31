@@ -7,8 +7,12 @@
     "markdown": "npm run markdown:2017 & npm run markdown:base",
     "markdown:base": "md-magic --path README.md",
     "markdown:2017": "md-magic --path 2017/README.md",
-    "test": "npm run test:2017 --",
-    "test:2017": "jest --config 2017/jest.config.js"
+    "markdown:2018": "md-magic --path 2018/README.md",
+    "markdown:2019": "md-magic --path 2019/README.md",
+    "test": "npm run test:2019 --",
+    "test:2017": "jest --config 2019/jest.config.js",
+    "download": "node ./scripts/generate-input.js",
+    "start": "node ./scripts/start.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -18,10 +22,16 @@
     "jest": "~21.2.1",
     "lint-staged": "~6.0.0",
     "markdown-magic": "~0.1.19",
-    "prettier": "~1.8.2"
+    "prettier": "~1.8.2",
+    "@types/node": "^12.12.14",
+    "nodemon": "^2.0.1",
+    "shelljs": "^0.8.3"
   },
   "dependencies": {
-    "axios": "~0.19.0"
+    "axios": "~0.19.0",
+    "@arrows/composition": "^1.2.1",
+    "get-caller-file": "^2.0.5",
+    "kleur": "^3.0.3"
   },
   "lint-staged": {
     "**/*.js": [
