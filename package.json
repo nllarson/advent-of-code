@@ -28,7 +28,7 @@
     "shelljs": "^0.8.3"
   },
   "dependencies": {
-    "axios": "~0.19.0",
+    "axios": "~0.21.1",
     "@arrows/composition": "^1.2.1",
     "get-caller-file": "^2.0.5",
     "kleur": "^3.0.3"
